@@ -1,0 +1,36 @@
+#include <iostream.h>
+#include <conio.h>
+#include <stdio.h>
+#include <iomanip.h>
+
+main()
+{
+	int n,sks;
+	char mk[20], kmk[5],kelas[6],dosen[20],sem[6],tahun[20];
+	char npm[8], nama[20];
+	int tugas,quis,uts,uas,na;
+	int a=0,b=0,c=0,d=0,e=0;
+	
+	cout << "                                  DAFTAR NILAI MAHASISWA\n";
+	cout << "=========================================================================================================\n";
+	cout << "Mata Kuliah    :                                          Dosen     :                                    \n";
+	cout << "Kode MK        :                                          Semester  :                                    \n";
+	cout << "SKS            :                                          Tahun     :                                    \n";
+	cout << "Kelas          :                                          Total     :      Peserta                       \n\n";
+	cout << "+----+-----------+-----------------+----------+----------+----------+--------+---------+--------+-------+\n";
+	cout << "| No | NPM       | Nama            | Quis     | Tugas    | UTS      | UAS    | Nilai   | Huruf  | Ket   |\n";
+	cout << "+----+-----------+-----------------+----------+----------+----------+--------+---------+--------+-------+\n";
+	cout << "|    |           |                 |          |          |          |        |         |        |       |\n";
+	cout << "+----+-----------+-----------------+----------+----------+----------+--------+---------+--------+-------+\n";
+	
+	gotoxy(16,3); gets(mk);
+	gotoxy(70,3); gets(dosen);
+	gotoxy(16,4); gets(kmk);
+	gotoxy(70,4); gets(sem);
+	gotoxy(16,5); cin >> sks;
+	gotoxy(70,5); gets(tahun);
+	gotoxy(16,6); gets(kelas);
+	gotoxy(70,6); cin >> n;
+	gotoxy(70,6); cout<< setw(2) << n;
+
+}
