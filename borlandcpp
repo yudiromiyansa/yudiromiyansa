@@ -1,0 +1,90 @@
+#include <iostream.h>
+#include <conio.h>
+#include <atdio.h>
+#include <iomanip.h>
+
+using namespace std;
+
+int main(){
+	int n, sks;
+	char mk[20], kmk[5], kelas[6],dosen[20],sem[6],tahun[20];
+	char npm[6],nama[20];
+	int tugas,quis,uts,uas,na;
+	int a=0,b=0,c=0,d=0,e=0;
+	int nfor;
+	int Aa,Bb,Cc,Dd,Ee,mutu;
+
+	cout << "                              DAFTAR NILAI MAHASISWA\n";
+	cout << "=================================================================================\n";
+	cout << "Mata Kuliah    :                                  Dosen    :                     \n";
+	cout << "Kode MK        :                                  Semester :                     \n";
+	cout << "SKS            :                                  Tahun    :                     \n";
+	cout << "Kelas          :                                  Total    :        Peserta      \n";
+	cout << "+----+-----------+----------------------+-------+--------+-------+-------+-------+-------+------+\n";
+	cout << "| No | NPM       | Nama                 | Quis  | Tugas  | UTS   | UAS   | Nilai | Huruf | Ket  |\n";
+	cout << "+----+-----------+----------------------+-------+--------+-------+-------+-------+-------+------+\n";
+	for(nfor=1;nfor<=n;nfor++){
+	gotoxy(1,10+nfor); cout<<"|"<<nfor<<"    |"<<endl;
+	gotoxy(7,10+nfor); cin>>npm;cout<<endl;
+	gotoxy(20,10+nfor); cin>>nama;cout<<endl;
+	gotoxy(42,10+nfor); cin>>quis[nfor];
+	gotoxy(51,10+nfor); cin>>tugas[nfor];
+	gotoxy(61,10+nfor); cin>>uts[nfor];
+	gotoxy(69,10+nfor); cin>>uas[nfor];
+
+	Aa=(quis[nfor]/100)*25%;
+	Bb=(tugas[nfor]/100)*25%;
+	Cc=(uts[nfor]/100)*25%;
+	Dd=(uas[nfor]/100)*25%;
+	Ee[nfor]=Aa+Bb+Cc+Dd;
+	gotoxy(77,10+nfor); cout<<Ee[nfor]<<endl;
+	{if (Ee[nfor]>=90)
+	mutu='A';
+	else if (Ee[nfor]>=75)
+		mutu='B';
+	else if (Ee[nfor]>=60)
+		mutu='C';
+	else if (Ee[nfor]>=45)
+		mutu='D';
+	else 
+		mutu='E';
+	gotoxy(85,10+nfor); cout<<mutu<<"    |";}
+	}
+	cout << "+----+-----------+----------------------+-------+--------+-------+-------+-------+-------+------+\n";
+	cout << "\n\n\n";
+	cout << "+-------------+---------+----------+\n";
+	cout << "| Interval    | Huruf   | Jumlah   |\n";
+	cout << "+-------------+---------+----------+\n";
+	cout << "| 90 sd 100   |   A     |          |\n";
+	cout << "| 75 sd 89    |   B     |          |\n";
+	cout << "| 60 sd 74    |   C     |          |\n";
+	cout << "| 45 sd 59    |   D     |          |\n";
+	cout << "|  0 sd 44    |   E     |          |\n";
+	cout << "+-------------+---------+----------+\n";
+
+
+	gotoxy(17,3); gets(mk);
+	gotoxy(64,3); gets(dosen);
+	gotoxy(17,4); gets(kmk);
+	gotoxy(64,4); gets(sem);
+	gotoxy(17,5); cin >> sks;
+	gotoxy(64,5); gets(tahun);
+	gotoxy(17,6); gets(kelas);
+	gotoxy(64,6); cin >> n;
+	gotoxy(64,6); cout << setw(2) << n;
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
