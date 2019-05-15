@@ -1,0 +1,43 @@
+                              KARTU HASIL STUDI				             
+-------------------------------------------------------------------------------------
+                                Input : x.x.                                        
+
+Nama      :                                 Angkatan    :                        
+NPM       :          	                    Pembimbing  :                        
+Jurusan   :                                 Semester    :                        
+
++-----------------------------------------------------------------------------------+
+| No  KodeMK  Mata Kuliah             SKS  Pengampu              Bobot  Mutu  Nilai |	
++-----------------------------------------------------------------------------------+
+| xx  xxxxxx  xxxxxxxxxxxxxxxxxxxxxx  xx   xxxxxxxxxxxxxxxxxxxx  x      x     xx    |
++-----------------------------------------------------------------------------------+
+|             Total                                                                 |
++-----------------------------------------------------------------------------------+
+
+Indeks Prestasi : x.x                                                            
+Batas SKS       : xx SKS                                                         
+
+
+KETERANGAN
+Semester 1,3,5,7 = Ganjil
+Semester 2,4,6,8 = Genap
+
+KodeMK 111 : TIK111  Algoritma              sks=3     Andi Saputra
+       112 : TIK112  Pemrograman            sks=2     Iriawan Mahendra
+       113 : TIK113  Logika Informatika     sks=4     Inaya Putri
+       121 : TIK121  Struktur Data          sks=3     Tubagus Eriawan
+       122 : TIK122  Pemrograman Basisdata  sks=2     Yudi Ari Ponco
+
+Mutu  A : bobot=4
+      B : bobot=3
+      C : bobot=2
+      D : bobot=1
+      E : bobot=0
+
+Nilai = sks x bobot
+
+ip = JumlahNilai/JumlahSks
+
+ip >= 3 : batasSKS = 24
+   >= 2 : batasSKS = 20
+   >= 0 : batasSKS = 16
