@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+	int data[10];
+	int n,temp;
+
+	cout << "+++++++++++++++++++++++++++++++++++++++++\n";
+	cout << "+++++++++ [ PROGRAM BUBBLE SHORT ] ++++++\n";
+	cout << "+++++++++++++++++++++++++++++++++++++++++\n";
+	cout << "Inputkan Banyak Data : "; cin >> n;
+	for (int i=0;i<n;i++)
+	{
+		cout << "Data ke " << i+1 << " : "; cin>>data[i];
+	}
+
+	cout << "+++++++++++++++++++++++++++++++++++++++++\n";
+	cout << "Data yang dimasukan adalah\n";
+	for (int i=0;i<n;i++)
+	{
+		cout<<data[i];
+	}
+	cout << endl;
+	cout << "+++++++++++++++++++++++++++++++++++++++++\n";
+
+	for(int i=0;i<n-1;i++)
+	{
+		cout << "Fase " << i+1 << " : ";
+		for(int j=1;j<n;j++)
+		{
+			if (data[i]>data[j])
+			{
+				temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+
+		for(int i=0;i<n;i++){
+			cout << data[i];
+		}
+		cout << endl;
+	}
+	cout << "+++++++++++++++++++++++++++++++++++++++++\n";
+	cout << "Data Setelah di urutkan adalah\n";
+	for (int i=0;i<n;i++)
+	{
+		cout << data[i] << endl;
+	}
+
+	return 0;
+}
