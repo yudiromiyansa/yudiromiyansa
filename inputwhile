@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>INPUT SI18B</title>
+</head>
+
+<body>
+    <form method="POST" action="outputwhile.php">
+        <table width="85%" border="1" align="center" cellpadding="5" cellspacing="0">
+            <tr>
+                <td colspan="2" align="center">INPUT MENGGUNAKAN WHILE</td>
+            </tr>
+            <tr>
+                <td width="40%">Nama Pembeli</td>
+                <td width="60%"><input type="text" name="inputnama"></td>
+            </tr>
+            <tr>
+                <td>Nama Produk</td>
+                <td>
+                    <select name="inputproduk">
+                        <option value="A">Roti Bakar (Rp. 15.000)</option>
+                        <option value="B">Martabak (Rp. 25.500)</option>
+                        <option value="C">Burger (Rp. 17.500)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Jumlah Beli :</td>
+                <td><input type="text" name="inputjumlah"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="btntampil" value="tampil">
+                    <input type="reset" name="btnreset" value="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
