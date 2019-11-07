@@ -1,0 +1,67 @@
+#untuk-warna-judul
+{
+    font: bold 18px Arial;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    background: #ff00ff;
+    height: 30px; 
+}
+
+#untuk-tombol
+{
+    width: 100px;
+    border: 1px solid #4d88ce;
+    height: 25px;
+    padding-top: 0px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #c0c0c0;
+    background-repeat: no-repeat;
+    font: bold 14px Arial;
+    background-position: 5px center;
+    color: #555555;
+}
+
+#untuk-text-input
+{
+    font: 12px Arial;
+    color: #555555;
+    height: 20px;
+    width: 250px;
+    border: 1px solid #555555;
+    padding-left: 5px;
+    padding-top: 0px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+}
+
+#untuk-select-input
+{
+    font: 12px Arial;
+    color: #555555;
+    height: 20px;
+    width: 170px;
+    border: 1px solid #555555;
+    padding-left: 5px;
+    padding-top: 0px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    background-color: #59A69A;
+}
+
+#untuk-judul-tabel
+{
+    height: 30px;
+    background: #ffffff;
+    background-color: #fff000;
+}
+
+#untuk-teks-judul-tabel
+{
+    font: bold 12px Arial;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    border-right: 1px solid #ffffff;
+}
