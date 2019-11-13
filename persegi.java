@@ -11,12 +11,12 @@ public class persegi
     
     public double getSisi()
     {
-        return sisi;
+        return sisi*sisi;
     }
     
     public double getLuas()
     {
-        return getSisi()*getSisi();
+        return getSisi();
     }
     
 }
