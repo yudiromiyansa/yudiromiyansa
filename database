@@ -1,0 +1,43 @@
+ <?php 
+
+
+$Db_Host = "localhost";
+$Db_User = "id9786754_lautandoa";
+$password = "12345abc";
+$Nama_Db = "id9786754_komentar";
+
+$db = mysqli_connect($Db_Host,$Db_User,$password,$Nama_Db);
+
+if( !$db ){
+    die("Gagal terhubung dengan database: " . mysqli_connect_error());
+}
+
+
+            if (isset($_POST['simpan'])) {
+
+              $satu = $_POST['nama'];
+              $dua = $_POST['email'];
+              $tiga = $_POST['nohp'];
+              $empat = $_POST['komentaruser'];
+              
+            
+
+            $sql = $db->query("insert into komentar (nama,email,nohp,komentaruser) 
+              values('$satu','$dua','$tiga','$empat')");
+
+            if ($sql) {
+              ?>
+
+              <script type="text/javascript">
+                alert("Data Berhasil di Dikirim, Terima kasih");
+                window.location.href="contact.php";
+                
+              </script>
+              echo="data berhasil dikirim";
+
+
+              <?php
+            }
+    }
+     ?>
+
