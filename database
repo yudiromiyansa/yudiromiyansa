@@ -1,5 +1,9 @@
  <?php 
 
+http://mfikri.com/artikel/membuat-select-berhubungan-dengan-ajax-dan-codeigniter.html
+https://www.sandro.id/artikel/23-membuat-select-combo-box-dinamis-dengan-ajax-dan-codeigniter
+https://www.google.com/search?safe=strict&sxsrf=ACYBGNRb9tv-pHpduB4eFfUymmBBUrVfog%3A1576121128162&ei=KLPxXZy7CZnbz7sPjvqmkAU&q=progran+membuat+select+lokasi&oq=progran+membuat+select+lokasi&gs_l=psy-ab.3...2913.76535..76727...26.0..10.1752.22263.0j32j6j14j9j2j2j1j2......0....1..gws-wiz.....10..35i39j0i67j0j35i362i39j0i131j0i131i67j0i13j0i22i30j0i10j33i21j33i22i29i30j33i160.kV7xy0Rqy4k&ved=0ahUKEwic793flK_mAhWZ7XMBHQ69CVIQ4dUDCAo&uact=5
+
 
 $Db_Host = "localhost";
 $Db_User = "id9786754_lautandoa";
