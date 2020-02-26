@@ -1,0 +1,80 @@
+CREATE DATABASE chandra_penjualan,
+
+USE chandra_penjualan;
+
+CREATE TABLE Kabupaten(
+	kbnKode CHAR(4) PRIMARY KEY, 
+	kbnNama VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Kecamatan(
+	kcnKode CHAR(6) PRIMARY KEY, 
+	kcnNama VARCHAR(50) NOT NULL,
+	kbnKode CHAR(4),
+	FOREIGN KEY (kbnKode) REFERENCES Kabupaten(kbnKode)
+);
+
+CREATE TABLE Kelurahan(
+	klnKode CHAR(10) PRIMARY KEY, 
+	klnNama VARCHAR(50) NOT NULL,
+	kcnKode CHAR(6),
+	FOREIGN KEY (kcnKode) REFERENCES Kecamatan(kcnKode)
+); 
+
+CREATE TABLE JenisBarang(
+	jbgKode INT AUTO_INCREMENT PRIMARY KEY,
+	jbgNama VARCHAR(50) NOT NULL,
+);
+
+CREATE TABLE Kasir(
+	ksrKode INT AUTO_INCREMENT PRIMARY KEY,
+	ksrNama VARCHAR(40) NOT NULL,
+	ksrPassword CHAR(32) NOT NULL,
+	ksrTglAktif DATE,
+	ksrStatus VARCHAR(9) DEFAULT 'AKTIF',
+	CONSTRAINT chStatusKasir,
+	CHECK (krsStatus IN ('AKTIF', 'NON-AKTIF'))
+);
+
+CREATE TABLE Barang(
+	brgKode CHAR(6) PRIMARY KEY,
+	brgNama VARCHAR(80) NOT NULL,
+	brgHarga DOUBLE NOT NULL,
+	jbgKode INT,
+	FOREIGN KEY (jbgKode) REFERENCES JenisBarang(jbgKode)
+);
+
+CREATE TABLE Pelanggan(
+	plnNIK CHAR(16) PRIMARY KEY,
+	plnNama VARCHAR(80) NOT NULL,
+	plnJK CHAR(1),
+	CONSTRAINT chPelangganJenisKelamin,
+	CHECK (plnJK IN ('P', 'L')),
+	plnTanggalLahir DATE,
+	plnNoHP VARCHAR(13),
+	plnTanggalGabung DATE NOT NULL,
+	plnStatusAnggota VARCHAR DEFAULT 'AKTIF',
+	CONSTRAINT chStatusAnggota,
+	CHECK (plnStatusAnggota IN('AKTIF', 'NON-AKTIF')),
+	klnKode CHAR(10),
+	FOREIGN KEY (klnKode) REFERENCES Kelurahan(klnKode)
+);
+
+CREATE TABLE Pesanan(
+	psnKode CHAR(13) PRIMARY KEY,
+	psnTanggal DATE,
+	psnTotal DOUBLE,
+	plnNIK CHAR(16),
+	FOREIGN KEY (plnNik) REFERENCES Pelanggan(plnNik),
+	ksrKode INT,
+	FOREIGN KEY (ksrKode) REFERENCES Kasir(ksrKode)
+);
+
+CREATE TABLE BarangPesanan(
+	psnKode CHAR(13),
+	FOREIGN KEY (psnKode) REFERENCES Pesanan(psnKode),
+	brgKode CHAR(6),
+	FOREIGN KEY (brgKode) REFERENCES Barang(brgKode),
+	bpnJumlah INT NOT NULL,
+	bpnSubTotal DOUBLE NOT NULL
+);
